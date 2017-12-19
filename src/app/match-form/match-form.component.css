@@ -1,0 +1,54 @@
+.form {
+  display: flex;
+  width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  flex-flow: column;
+  border-radius: 10px;
+  font-size: 12px;
+  color: rgb(74,74,74);
+  background: white;
+}
+
+form {
+  display: block;
+  margin: 0 auto;
+}
+
+select {
+  width: 190px;
+  height: 35px;
+}
+
+input {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 10px 40px;
+  margin-bottom: 15px;
+}
+
+#length-input{
+  text-align: left;
+  width: 130px;
+}
+
+#time-input {
+  text-align: left;
+}
+
+
+
+button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px;
+  color: white;
+  font-size: 15px;
+  background: rgb(235,113,82);
+  background: -webkit-linear-gradient(left, rgb(235,113,82) , rgb(229,155,61));
+  background: -o-linear-gradient(right, rgb(235,113,82), rgb(229,155,61));
+  background: -moz-linear-gradient(right, rgb(235,113,82), rgb(229,155,61));
+  background: linear-gradient(to right, rgb(235,113,82) , rgb(229,155,61));
+}

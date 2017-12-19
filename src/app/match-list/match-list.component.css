@@ -1,0 +1,38 @@
+.container {
+  width: 600px;
+  border: 1px solid grey;
+  border-radius: 30px;
+  list-style-type: none;
+}
+
+.match-list{
+  display: block;
+  margin: 0 auto;
+  /*justify-content: center;*/
+}
+
+.date {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+.day {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.match-list a {
+  text-decoration: none;
+  color: rgb(114,170,229);
+}
+
+li {
+  border-bottom: 1px dotted lightgrey;
+  margin-right: 40px;
+  margin-left: -10px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}

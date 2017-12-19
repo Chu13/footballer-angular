@@ -1,0 +1,58 @@
+.form {
+  display: flex;
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  flex-flow: column;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  font-size: 12px;
+  color: rgb(74,74,74);
+  background: white;
+}
+
+form {
+  display: block;
+  margin: 0 auto;
+}
+
+input {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 10px 40px;
+  margin-bottom: 15px;
+}
+
+button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px;
+  color: white;
+  font-size: 15px;
+  background: rgb(235,113,82);
+  background: -webkit-linear-gradient(left, rgb(235,113,82) , rgb(229,155,61));
+  background: -o-linear-gradient(right, rgb(235,113,82), rgb(229,155,61));
+  background: -moz-linear-gradient(right, rgb(235,113,82), rgb(229,155,61));
+  background: linear-gradient(to right, rgb(235,113,82) , rgb(229,155,61));
+}
+
+.form-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(247,247,247);
+  height: 70px;
+}
+
+.form-bottom p {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.form-bottom a {
+  background: -webkit-linear-gradient(rgb(235,113,82) , rgb(229,155,61));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

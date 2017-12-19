@@ -1,0 +1,17 @@
+<header class="top">
+  <img src="../assets/nav-logo.png"/>
+  <div class="flex">
+    <a *ngIf="playerThang.currentUser"(click)="startLogOut()" href="">
+      Log Out
+    </a>
+  <p>
+    <b *ngIf="playerThang.currentUser">
+       {{ playerThang.currentUser.fullName}}
+    </b>
+  </p>
+</div>
+</header>
+
+<div class="match-list">
+<match-list></match-list>
+</div>

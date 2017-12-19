@@ -1,0 +1,45 @@
+<div class="form">
+  <h2> Create Match </h2>
+
+  <form (ngSubmit)="createMatch()">
+
+      <label for="captain-input"> CAPTAIN </label>
+      <br />
+      <input id="captain-input" type="text" placeholder="Paolo Maldini"
+         [(ngModel)]="theMatch.captain"name="captainInput"/>
+        <br />
+
+      <label for="date-input"> DATE </label>
+      <br />
+      <input id="date-input" type="date" placeholder="10-06-2017"
+         [(ngModel)]="theMatch.date"name="dateInput"/>
+      <br />
+
+      <label for="length-input"> LENGTH </label>
+      <br />
+      <input id="length-input" type="number" min="1" max="5" placeholder="2 Hours"
+         [(ngModel)]="theMatch.length" name="lengthInput" />
+      <br />
+
+      <label for="time-input"> TIME (PM) </label>
+      <br />
+      <input id="time-input" type="number" placeholder="7 PM"
+         [(ngModel)]="theMatch.time" name="timeInput"/>
+      <br />
+
+      <label for="field-input"> FIELD NUMBER </label>
+      <br />
+      <select id="field-input" type="text" name="fieldInput"
+        [(ngModel)]="theMatch.field" placeholder="field 3">
+
+        <option value="Field 1"> Field 1 </option>
+        <option value="Field 2"> Field 2 </option>
+        <option value="Field 3"> Field 3 </option>
+        <option value="Field 4"> Field 4 </option>
+
+      </select>
+      <br />
+
+      <button> CREATE MATCH </button>
+  </form>
+</div>

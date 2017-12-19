@@ -1,0 +1,39 @@
+/* Top Bar and icon ----------------------------------------------- */
+.top {
+  background: rgb(114,170,229);
+  background: -webkit-linear-gradient(left, rgb(114,170,229) , rgb(141,194,239));
+  background: -o-linear-gradient(right, rgb(114,170,229), rgb(141,194,239));
+  background: -moz-linear-gradient(right, rgb(114,170,229), rgb(141,194,239));
+  background: linear-gradient(to right, rgb(114,170,229) , rgb(141,194,239));
+  height: 80px;
+}
+
+.flex{
+  height: 100%;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+}
+
+.top a {
+  margin-right: 20px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.top p {
+  margin-right: 20px;
+  color: white
+}
+
+.top img {
+  margin-top: 10px;
+  float: left;
+  width: 350px;
+}
+
+.match-list {
+  display: flex;
+  justify-content: center;
+}

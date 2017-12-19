@@ -1,0 +1,47 @@
+<div class="form">
+  <h2> Sign Up </h2>
+
+  <form (ngSubmit)="startSignupAjax()">
+    <label for="placeName-input"> PLACE NAME </label>
+    <br />
+    <input id="placeName-input" type="text" placeholder="Miami Soccer Field"
+       [(ngModel)]="theAdmin.placeName"name="placeNameInput"/>
+      <br />
+
+    <label for="email-input"> EMAIL </label>
+    <br />
+    <input id="email-input" type="text" placeholder="d10s@maradona.com"
+       [(ngModel)]="theAdmin.email"name="emailInput"/>
+    <br />
+
+    <label for="password-input"> PASSWORD</label>
+    <br />
+    <input id="password-input" type="password" placeholder="*********"
+       [(ngModel)]="theAdmin.password"name="passwordInput" />
+      <br />
+
+    <label for="phone-input"> PHONE </label>
+    <br />
+    <input id="phone-input" type="text" placeholder="(305)-555-5555"
+       [(ngModel)]="theAdmin.phone" name="phoneInput"/>
+    <br />
+
+    <label for="location-input"> LOCATION </label>
+    <br />
+    <input id="location-input" type="text" name="locationInput"
+      [(ngModel)]="theAdmin.location"placeholder="523 NW 73rd St, Miami, FL 33150" />
+    <br />
+
+    <label for="fields-input"> NUMBER OF FIELDS </label>
+    <br />
+    <input id="fields-input" type="number" placeholder="4"
+       [(ngModel)]="theAdmin.fields" name="fieldsInput"/>
+    <br />
+
+
+      <button> Join </button>
+  </form>
+  <div class="form-bottom">
+    <p>Already have an account ? <a routerLink="/">Login</a></p>
+  </div>
+</div>

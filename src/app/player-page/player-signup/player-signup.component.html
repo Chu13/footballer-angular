@@ -1,0 +1,53 @@
+<div class="form">
+  <h2> Sign Up </h2>
+
+  <form (ngSubmit)="startPlayerSignup()">
+    <label for="fullname-input"> FULL NAME </label>
+    <br />
+    <input id="fullname-input" type="text" placeholder="e.g. Diego Maradona"
+      [(ngModel)]="thePlayer.fullName" name="fullNameInput"/>
+      <br />
+
+    <label for="username-input"> USERNAME </label>
+      <br />
+    <input id="username-input" type="text" placeholder="e.g. D10s"
+        [(ngModel)]="thePlayer.username" name="usernameInput"/>
+      <br />
+
+    <label for="email-input"> EMAIL </label>
+    <br />
+    <input id="email-input" type="text" placeholder="e.g. d10s@maradona.com"
+      [(ngModel)]="thePlayer.email" name="playerInput"/>
+    <br />
+
+    <label for="password-input"> PASSWORD</label>
+    <br />
+    <input id="password-input" type="password" placeholder="e.g. *********"
+      [(ngModel)]="thePlayer.password" name="passwordInput" />
+      <br />
+
+    <label for="phone-input"> PHONE </label>
+    <br />
+    <input id="phone-input" type="text" placeholder="e.g. (305)-555-5555"
+      [(ngModel)]="thePlayer.phone" name="phoneInput"/>
+    <br />
+
+    <label for="nationality-input"> NATIONALITY </label>
+    <br />
+    <input id="nationality-input" type="text" placeholder="e.g. Argentina"
+       [(ngModel)]="thePlayer.nationality" name="nationalityInput"/>
+    <br />
+
+    <label for="position-input"> POSITION </label>
+    <br />
+    <input id="position-input" type="text" placeholder="e.g. FORWARD"
+      [(ngModel)]="thePlayer.position" name="positionInput"/>
+    <br />
+
+
+      <button> Join </button>
+  </form>
+  <div class="form-bottom">
+    <p>Already have an account ? <a routerLink="/">Login</a></p>
+  </div>
+</div>
