@@ -3,6 +3,10 @@
   <h2> Sign in to Footballer As Player. </h2>
   <p> Enter Your Details Below</p>
 
+  <p *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </p>
+
   <form (ngSubmit)="loginPlayer()">
     <label for="email-input"> EMAIL </label>
     <br />

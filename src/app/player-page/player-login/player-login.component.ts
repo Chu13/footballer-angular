@@ -12,6 +12,8 @@ export class PlayerLoginComponent implements OnInit {
 
   thePlayer = new Player();
 
+  errorMessage: string;
+
   constructor(
     private playerThang: PlayerApiService,
     private routerThang: Router
@@ -27,7 +29,13 @@ export class PlayerLoginComponent implements OnInit {
             console.log("Log in Succesful");
         })
         .catch((err) => {
-            alert('Sorry! Something went wrong.');
+          const apiResult = err.error;
+
+          this.errorMessage = apiResult.error;
+
+          if (!this.errorMessage) {
+            this.errorMessage = "Sorry, y'all. Something went wrong.";
+          }
             console.log('Log in error');
             console.log(err);
         });

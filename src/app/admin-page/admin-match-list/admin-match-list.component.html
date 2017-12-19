@@ -1,0 +1,22 @@
+<div class="match-list">
+  <h2> Matches </h2>
+  <div>
+
+  </div>
+   <ul class="container">
+     <li *ngFor="let oneMatch of matches">
+       <div class="date">
+         <span class="day">{{ oneMatch.date | date: 'd'}}</span>
+         <span>{{ oneMatch.date | date: 'MMM'}}</span>
+       </div>
+         <h3> {{ oneMatch.captain }} </h3>
+         <p>
+           <i>{{ oneMatch.place }} </i>
+         </p>
+         <p>
+            <i>{{ oneMatch.field }}</i>
+         </p>
+         <a [routerLink]="['/matches', oneMatch._id]"> Details </a>
+     </li>
+   </ul>
+</div>

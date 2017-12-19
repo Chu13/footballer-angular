@@ -35,6 +35,13 @@ export class MatchApiService {
          ).toPromise();
     }
 
+    getMatchesAdmin() {
+         return this.httpThang.get(
+           `${environment.backendUrl}/api/matches/admin`,
+           { withCredentials: true}
+         ).toPromise();
+    }
+
     getOneMatch(oneId: string) {
          return this.httpThang.get(
            `${environment.backendUrl}/api/matches/${oneId}`,

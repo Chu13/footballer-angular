@@ -23,6 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SignupPlayerComponent } from './signup-player/signup-player.component';
 import { SignupAdminComponent } from './signup-admin/signup-admin.component';
 import { MatchFormComponent } from './match-form/match-form.component';
+import { AdminMatchListComponent } from './admin-page/admin-match-list/admin-match-list.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { MatchFormComponent } from './match-form/match-form.component';
     NotFoundComponent,
     SignupPlayerComponent,
     SignupAdminComponent,
-    MatchFormComponent
+    MatchFormComponent,
+    AdminMatchListComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { AdminApiService, Admin } from '../../services/admin-api.service';
 export class AdminSignupComponent implements OnInit {
 
   theAdmin = new Admin();
+  errorMessage: string;
 
   constructor(
     private adminThang: AdminApiService,
@@ -27,7 +28,13 @@ export class AdminSignupComponent implements OnInit {
              this.routerThang.navigate(['/admin']);
          })
          .catch((err) => {
-             alert('Sorry! Something went wrong.');
+           const apiResult = err.error;
+
+           this.errorMessage = apiResult.error;
+
+           if (!this.errorMessage) {
+             this.errorMessage = "Sorry, y'all. Something went wrong.";
+           }
              console.log('Sign up error');
              console.log(err);
          });

@@ -11,6 +11,7 @@ import { PlayerApiService, Player } from '../../services/player-api.service'
 export class PlayerSignupComponent implements OnInit {
 
   thePlayer = new Player();
+  errorMessage: string;
 
   constructor(
     private playerThang: PlayerApiService,
@@ -26,7 +27,13 @@ export class PlayerSignupComponent implements OnInit {
       this.routerThang.navigate(['/player']);
     })
     .catch((err) => {
-      alert('Sorry! Something went wrong.');
+      const apiResult = err.error;
+
+      this.errorMessage = apiResult.error;
+
+      if (!this.errorMessage) {
+        this.errorMessage = "Sorry, y'all. Something went wrong.";
+      }
       console.log('Sign up error');
       console.log(err);
     })

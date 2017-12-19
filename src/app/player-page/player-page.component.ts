@@ -17,8 +17,11 @@ export class PlayerPageComponent implements OnInit {
 
   ngOnInit() {
     this.playerThang.getCheckLogin()
-      // no ".then()" because "getCheckLogin()"
-      // already has ".then()" that what we need
+    .then(() => {
+      if (this.playerThang.currentUser.admin) {
+        this.routerThang.navigate(['/admin'])
+      }
+    })
       .catch((err) => {
         alert("Sorry! Something went wrong.");
         console.log(err);

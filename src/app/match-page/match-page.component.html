@@ -6,7 +6,7 @@
     <a *ngIf="!playerThang?.currentUser?.admin" (click)="startLogOut()" href="">Log out</a>
     <a *ngIf="adminThang?.currentUser?.admin" (click)="startLogOut()" href=""> Log out</a>
     <p>
-      <b *ngIf="!playerThang?.currentUser">
+      <b *ngIf="!playerThang?.currentUser?.admin">
         {{ playerThang?.currentUser?.fullName}}
       </b>
       <b *ngIf="adminThang?.currentUser?.admin">
@@ -72,14 +72,14 @@
     <div class="status-bottom">
       <div class=blue-team>
         <ul>
-          <li *ngFor="let onePlayer of matchInfo.players.slice(0,6)">
+          <li *ngFor="let onePlayer of matchInfo?.players?.slice(0,6)">
             <p>{{ onePlayer }}</p>
           </li>
         </ul>
       </div>
       <div class="green-team">
         <ul>
-          <li *ngFor="let onePlayer of matchInfo.players.slice(7,12)">
+          <li *ngFor="let onePlayer of matchInfo?.players?.slice(7,12)">
             <p>{{ onePlayer }}</p>
           </li>
         </ul>
@@ -92,7 +92,7 @@
 
   <img src="../assets/soccer-field.png" id="soccer-field" alt="Soccer Field"/>
 
-  <button *ngIf="!adminThang.currentUser.admin" id="check-in" (click)="checkIn()">
+  <button *ngIf="!adminThang?.currentUser?.admin && !checkedIn()" id="check-in" (click)="checkIn()">
     Check in to play
   </button>
 
@@ -100,7 +100,7 @@
     <h3>Stand by Players</h3>
     <div class="stand-players-list">
       <ul>
-        <li *ngFor="let onePlayer of matchInfo.players.slice(13, 50)">
+        <li *ngFor="let onePlayer of matchInfo?.players?.slice(13, 50)">
           <p>{{ onePlayer }}</p>
         </li>
       </ul>

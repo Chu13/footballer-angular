@@ -17,6 +17,7 @@ export class MatchPageComponent implements OnInit {
   matchInfo = new Match();
 
 
+
   constructor(
     public activatedThang: ActivatedRoute,
     public matchThang: MatchApiService,
@@ -69,9 +70,10 @@ export class MatchPageComponent implements OnInit {
 
   checkIn() {
     this.matchThang.checkInUser(this.matchInfo._id)
-    .then(() => {
+    .then((matchFromApi: Match) => {
       console.log("Adding Player succesful");
-      this.routerThang.navigate(['/matches', this.matchInfo._id]);
+      // this.routerThang.navigate(['/matches', this.matchInfo._id]);
+      this.matchInfo = matchFromApi;
     })
     .catch((err) => {
       alert('Sorry! Something went wrong.');
@@ -79,6 +81,34 @@ export class MatchPageComponent implements OnInit {
       console.log(err);
     })
   }
+
+  checkedIn() {
+    let result = false;
+  this.matchInfo.players.forEach((x) => {
+
+      if (x  ===  this.playerThang.currentUser.username) {
+
+      result = true
+    }
+    });
+    return result;
+  }
+
+
+
+  startLogOut() {
+  this.adminThang.logOut()
+  .then(() => {
+    this.routerThang.navigate(['/']);
+  })
+  .catch((err) => {
+    alert("Sorry! Something went wrong.");
+    console.log("Log Out Error");
+    console.log(err);
+  });
+
+
+}
 
 
 

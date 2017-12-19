@@ -20,6 +20,11 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     this.adminThang.getCheckLogin()
+      .then(() => {
+        if (this.adminThang.currentUser) {
+          this.routerThang.navigate(['/player'])
+        }
+      })
 
       .catch((err) => {
         alert("Sorry! Something went wrong.");
